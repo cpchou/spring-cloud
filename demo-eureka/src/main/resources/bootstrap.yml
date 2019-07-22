@@ -1,0 +1,11 @@
+# spring:
+#   application:
+#     name: spring-eureka
+#   cloud:
+#     config:
+#       uri: http://spring-config:7000/
+#       profile: default
+#       label: master
+
+# server:
+#   port: ${PORT:8761}

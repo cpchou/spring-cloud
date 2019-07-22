@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: spring-hystrix
+
+server:
+  port: 8763
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    instance-id: spring-hystrix
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    serviceUrl:
+      defaultZone: ${DISCOVERY_URL:http://spring-eureka:8761}/eureka/
+
+

@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: api-gateway
+  # cloud:
+  #   gateway:
+  #     discovery:
+  #       locator:
+  #         enabled: true
+#      routes:
+#        - id: default_path_to_http
+#          uri: https://windmt.com
+#          order: 10000
+#          predicates:
+#            - Path=/**
+#          filters:
+#            - SetPath=/
+server:
+  port: 10000
+
+
+eureka:
+  instance:
+    prefer-ip-address: false
+    # instance-id: http://localhost:10000
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://spring-eureka:8761/eureka/
+
+logging:
+  level:
+    org.springframework.cloud.gateway: debug
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream

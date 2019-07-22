@@ -1,0 +1,1 @@
+java -Dserver.port=7003 -Deureka.instance.hostname=peer3 -Deureka.client.serviceUrl.defaultZone=http://localhost:7001/eureka/,http://localhost:7002/eureka/ -jar .\target\demo-eureka-0.0.1-SNAPSHOT.jar
